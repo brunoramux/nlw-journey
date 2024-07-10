@@ -1,0 +1,67 @@
+@baseUrl = http://localhost:3333
+
+# @name create_trip
+POST {{baseUrl}}/trips
+Content-Type: application/json
+
+{
+  "destination": "Floripa",
+  "starts_at": "2024-06-01 18:00:00",
+  "ends_at": "2024-06-02 18:00:00"
+}
+
+###
+
+# @name create_trip_validation_error
+POST {{baseUrl}}/trips
+Content-Type: application/json
+
+{
+  "destination": "Floripa",
+  "starts_at": "2024-07-08 18:00:00",
+  "ends_at": "2024-06-02 18:00:00"
+}
+
+###
+
+# @name create_trip_validation_error
+POST {{baseUrl}}/trips
+Content-Type: application/json
+
+{
+  "destination": "Floripa",
+  "starts_at": "2024-07-10 18:00:00",
+  "ends_at": "2024-07-09 18:00:00"
+}
+
+
+###
+
+# @name create_trip_validation_error
+POST {{baseUrl}}/trips
+Content-Type: application/json
+
+{
+  "destination": "Floripa",
+  "starts_at": "2024-07-10 18:00:00",
+  "ends_at": "2024-07-18 18:00:00"
+}
+
+###
+
+# @name test_email
+POST {{baseUrl}}/trips
+Content-Type: application/json
+
+{
+  "destination": "Floripa",
+  "starts_at": "2024-07-10 18:00:00",
+  "ends_at": "2024-07-19 18:00:00",
+  "owner_name": "Bruno Ramos Lemos",
+  "owner_email": "bruno.lemos@live.com",
+  "emails_to_invite": [
+    "tecbrunoramos@gmail.com",
+    "brunolemos@bb.com.br"
+  ]
+}
+
