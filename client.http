@@ -65,3 +65,55 @@ Content-Type: application/json
   ]
 }
 
+###
+
+# @name create_activity
+POST {{baseUrl}}/trips/6cbbcf85-fc84-4ba3-ac9b-e176c25a06e8/activities
+Content-Type: application/json
+
+{
+  "title": "Festinha na praia",
+  "occurs_at": "2024-07-12 21:00:00"
+}
+
+###
+
+# @name create_activity_error_date
+POST {{baseUrl}}/trips/6cbbcf85-fc84-4ba3-ac9b-e176c25a06e8/activities
+Content-Type: application/json
+
+{
+  "title": "Festinha na praia",
+  "occurs_at": "2024-06-30 21:00:00"
+}
+
+###
+
+# @name get_activities
+GET {{baseUrl}}/trips/6cbbcf85-fc84-4ba3-ac9b-e176c25a06e8/activities
+
+###
+
+# @name create_link
+POST {{baseUrl}}/trips/6cbbcf85-fc84-4ba3-ac9b-e176c25a06e8/links
+Content-Type: application/json
+
+{
+  "title": "Reserva AIRBNB",
+  "url": "http://airbnb.com.br/orderid"
+}
+
+###
+
+# @name get_links
+GET {{baseUrl}}/trips/6cbbcf85-fc84-4ba3-ac9b-e176c25a06e8/links
+
+###
+
+# @name get_participant
+GET {{baseUrl}}/participants/d3c22a80-760a-46b5-a335-0c5a35ebc7ac
+
+###
+
+# @name get_links
+GET {{baseUrl}}/trips/6cbbcf85-fc84-4ba3-ac9b-e176c25a06e8/participants
